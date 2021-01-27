@@ -5,18 +5,64 @@
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
+// let remove = function remove(['Cadence', 'Ordel', 'Marion'])
+
+// let myArray = ['Cadence', 'Ordel', 'Marion']
+// remove(['Cadence', 'Ordel', 'Marion'], 'Marion')
+// let remove = function (myArray, delete) {
+//     console.log(myArray.indexOf()
+// }
+// for of
+function remove(peopleArray, person) {
+    let newArray = peopleArray.slice()
+    while (newArray.includes(person)) {
+        let position = newArray.indexOf(person)
+        newArray.splice(position, 1)
+    }
+
+    return newArray
+}
+
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 
-// 3. Create a function called "sum" that takes an array of numbers and
-// returns the sum of those numbers.
+// 3. Create a function called "sum"
+// that takes an array of numbers 
+//and returns the sum of those numbers.
+function sum(nums) {
+    let sum = 0;
+    for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
 
-// 4. Create a function called "average" that takes an array of numbers
+    }
+    return sum
+}
+// 4. Create a function called "average"
+// that takes an array of numbers
 // and returns the average of those numbers.
+function average(numArray) {
+    let sum = 0;
+    for (let i = 0; i < numArray.length; i++) {
+        sum = sum + numArray[i]
+        var average = (sum / numArray.length)
+
+    }
+    return average
+}
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+function minimum(myArray) {
+    let currentSmallestNum = undefined;
+    for (let i = 0; i <= myArray.length; i++) {
+        if (currentSmallestNum > myArray[i] || currentSmallestNum === undefined) {
+            currentSmallestNum = myArray[i];
+        };
+
+    };
+    return currentSmallestNum
+}
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
